@@ -50,6 +50,38 @@ function WelcomeScreen({ navigation }) {
   );
 }
 
+function emailLogin() {
+  const provider = new firebase.auth.EmailAuthProvider();
+
+  firebase.auth().signInWithPopup(provider)
+
+      .then(navigation.navigate("Main"))
+}
+
+function facebookLogin() {
+  const provider = new firebase.auth.FacebookAuthProvider();
+
+  firebase.auth().signInWithPopup(provider)
+
+      .then(navigation.navigate("Main"))
+}
+
+/*function twitterLogin() {
+  const provider = new firebase.auth.TwitterAuthProvider();
+
+  firebase.auth().signInWithPopup(provider)
+
+      .then(navigation.navigate("Main"))
+} */
+
+function googleLogin() {
+  const provider = new firebase.auth.GoogleAuthProvider();
+
+  firebase.auth().signInWithPopup(provider)
+
+      .then(navigation.navigate("Main"))
+}
+
 const styles2 = StyleSheet.create({
   background: {
     flex: 1,
